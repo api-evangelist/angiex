@@ -1,23 +1,69 @@
 aid: angiex
+
 name: Angiex
-description: 'Angiex is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://angiex.com/ASSETS/IMG/news/_1200x630_crop_center-center_none/news-default.png
+
+description: 'Angiex is developing first‑in‑class Nuclear‑Delivered Antibody‑Drug Conjugates™ (ND‑ADCs) to address cancer lethality. The company aims to make cancer a non‑lethal disease, leveraging novel biology to deliver safe and effective therapies. Over one‑third of people in developed countries develop cancer, with 10 million deaths annually; Angiex’s vision is that no one should die of cancer.'
+
 url: https://raw.githubusercontent.com/api-evangelist/angiex/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
+- Biotechnology
+- Oncology
+- Drug Development
+- Antibody‑Drug Conjugates
+- Cancer Therapy
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/angiex-hosts.yml
+- type: PrivacyPolicy
+  url: https://angiex.com/privacy-policy/
+- type: Newsroom
+  url: https://angiex.com/news
+- type: Documentation
+  url: https://angiex.com/ASSETS/DOCS/Angiex-World_ADC_POSTER_Final.pdf
+- type: Blog
+  url: https://angiex.com/blog
+- type: DomainSecurity
+  url: security/angiex-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://angiex.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: Angiex provides only corporate website and PDF poster with no developer program or API documentation.
+  evidence:
+    - url: https://angiex.com/ASSETS/DOCS/Angiex-World_ADC_POSTER_Final.pdf
+      status: 200
+  checked: 2026-09-24
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
